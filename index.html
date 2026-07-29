@@ -42,6 +42,12 @@
         margin: 0 auto;
     }
 
+    .blurb {
+        text-align: center;
+        margin-bottom: -1rem;
+        margin-top: 2rem;
+    }
+
     .name {
         justify-self: center;
         font-size: 4rem;
@@ -80,7 +86,7 @@
     .nick-cannon {
         margin: auto;
         width: 19rem;
-        height: 18rem;
+        height: 16rem;
         margin-top: 1rem;
         /* outline: solid; */
         object-fit: cover;
@@ -112,6 +118,7 @@
 <body onload="newName(), randomNickCannon()">
     <main>
         <div class="name-container">
+            <p class="blurb">Your Nick Cannon baby name is</p>
             <p class="name">
                 <span id="firstname"></span>
                 <span id="secondname"></span>
