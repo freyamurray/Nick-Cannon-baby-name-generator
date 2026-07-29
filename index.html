@@ -34,6 +34,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        padding-bottom: 1rem;
     }
 
     .name-container {
@@ -78,21 +79,25 @@
 
     .nick-cannon {
         margin: auto;
-        width: 15rem;
-        height: 15rem;
+        width: 19rem;
+        height: 18rem;
         margin-top: 1rem;
+        /* outline: solid; */
+        object-fit: cover;
 
         img {
             width: 100%;
+            height: 100%;
             object-fit: contain;
         }
     }
 
-    footer {
+    .footer {
         margin-top: -4rem;
         font-size: .8rem;
         text-align: center;
-        line-height: .5rem;
+        /* line-height: .5rem; */
+        text-wrap: wrap;
 
         a {
             color: rgb(155, 60, 0);
@@ -111,20 +116,21 @@
         </div>
         <div class="nick-cannon" id="nick-cannon-pic">
         </div>
+        <div class="footer">
+            <p>Site by <a href="https://github.com/freyamurray">Freya Murray</a>.</p>
+            <p> If you liked this silly little project, consider <a href="https://ko-fi.com/7reya">buying me a kofi!</a>
+            </p>
+        </div>
     </main>
-    <footer>
-        <p>Site by <a href="https://github.com/freyamurray">Freya Murray</a>.</p>
-        <p> If you liked this silly little project, consider <a href="https://ko-fi.com/7reya">buying me a kofi!</a></p>
-    </footer>
 </body>
 
 <script>
     const firstnames = [
-        "Celestial", "Chrome", "Platinum", "Disciple", "Iconic", "Superior", "Mighty", "Strong", "Mighty", "Effervescent", "Sparkling", "Trillion", "Superior", "Exalted", "Fahrenheit", "Obsidian", "Stunning", "Holy", "Transcendent", "Mythic", "Apocryphal", "Indescribable", "Opulent", "Lavish", "Crystalline", "Ethereal", "Halcyon", "Tranquil", "Cosmic", "Luminous", "Fierce", "Goliath", "Alpha", "Elysian", "Incandescent", "Dazzling", "Luxe", "Prismatic", "Abundant", "Angel", "Exquisite", "Divine", "Forever", "Cartier", "Sterling", "Saint", "Satin", "Mercy"
+        "Celestial", "Chrome", "Platinum", "Disciple", "Iconic", "Superior", "Mighty", "Strong", "Mighty", "Effervescent", "Sparkling", "Trillion", "Superior", "Exalted", "Fahrenheit", "Obsidian", "Stunning", "Holy", "Transcendent", "Mythic", "Apocryphal", "Indescribable", "Opulent", "Lavish", "Crystalline", "Ethereal", "Halcyon", "Tranquil", "Cosmic", "Luminous", "Fierce", "Goliath", "Alpha", "Elysian", "Incandescent", "Dazzling", "Luxe", "Prismatic", "Abundant", "Angel", "Exquisite", "Divine", "Forever", "Cartier", "Sterling", "Saint", "Satin", "Mercy", "Liminal", "Shimmering", "Dream", "Irridescent", "Ermine"
     ];
 
     const secondnames = [
-        "Pope", "Sphinx", "Phrygian", "Locrian", "Lydian", "Love", "Chiffon", "Lava", "Emerald", "Opal", "Meditation", "Everest", "Zenith", "Duchess", "Caviar", "Diamond", "Zirconia", "Xanadu", "Extravaganza", "Couture", "Aurora", "Borealis", "Ephemera", "Labyrinth", "Serendipity", "Stardust", "Diva", "Princess", "Icon", "Genesis", "Zephyr", "Reverie", "Catharsis", "Plethora", "Syzergy", "Epiphany", "Bliss", "Carat", "Hermes", "Champagne", "Swarovski", "Prayer", "Dior", "Perignon", "Cashmere", "Prada", "Heaven", "King", "Prince", "Marquise", "Royalty", "Hero", "Archer", "Goddess", "Psalm", "Air", "Silk"
+        "Pope", "Sphinx", "Phrygian", "Locrian", "Lydian", "Love", "Chiffon", "Lava", "Emerald", "Opal", "Meditation", "Everest", "Zenith", "Duchess", "Caviar", "Diamond", "Zirconia", "Xanadu", "Extravaganza", "Couture", "Aurora", "Borealis", "Ephemera", "Labyrinth", "Serendipity", "Stardust", "Diva", "Princess", "Icon", "Genesis", "Zephyr", "Reverie", "Catharsis", "Plethora", "Syzergy", "Epiphany", "Bliss", "Carat", "Hermes", "Champagne", "Swarovski", "Prayer", "Dior", "Perignon", "Cashmere", "Prada", "Heaven", "King", "Prince", "Marquise", "Royalty", "Hero", "Archer", "Goddess", "Psalm", "Air", "Silk", "Topaz", "Aspiration", "Ziggurat", "Supreme", "Royale"
     ];
 
     function newName() {
