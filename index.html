@@ -20,6 +20,7 @@
     body {
         margin: 0;
         padding: 0 1rem;
+        background-color: rgb(155, 60, 0);
     }
 
     main {
@@ -29,6 +30,9 @@
         background-color: rgb(253, 231, 222);
         border-radius: 2rem;
         max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .name-container {
@@ -38,14 +42,14 @@
 
     .name {
         justify-self: center;
-        font-size: 4.8rem;
+        font-size: 4rem;
         font-family: hello;
         margin: 2rem 3rem;
+        padding: 1rem;
         text-align: center;
         text-shadow: rgb(255, 145, 0) 1px 1px 1px;
         height: 10rem;
-        align-content: end;
-
+        align-content: center;
     }
 
     p {
@@ -54,8 +58,8 @@
 
     button {
         display: flex;
-        margin: auto;
-        font-size: 1.5rem;
+        margin: 1rem auto;
+        font-size: 1.4rem;
         cursor: pointer;
         background: white;
         padding: 1rem;
@@ -63,6 +67,7 @@
         border-radius: 1rem;
         transition-duration: .2s;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(155, 60, 0);
 
         &&:active {
             scale: 95%;
@@ -71,13 +76,13 @@
 
     .nick-cannon {
         margin: auto;
-        width: 20rem;
-        height: 20rem;
-        padding: 3rem;
+        width: 15rem;
+        height: 15rem;
+        margin-top: 1rem;
 
         img {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 
@@ -100,7 +105,7 @@
                 <span id="firstname"></span>
                 <span id="secondname"></span>
             </p>
-            <button onclick="newName(), randomNickCannon()">Generate</button>
+            <button role="button" onclick="newName(), randomNickCannon()">Generate</button>
         </div>
         <div class="nick-cannon" id="nick-cannon-pic">
         </div>
