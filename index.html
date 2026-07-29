@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Cannon baby name generator</title>
+</head>
+
+<style>
+    * { 
+        box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: hello;
+        src: url(Hello.ttf);
+    }
+    body {
+        margin: 0;
+    }
+
+    main {
+        height: calc(100vh - 2rem);
+        margin: 1rem auto;
+        align-content: center;
+        background-color: rgb(253, 231, 222);
+        border-radius: 2rem;
+        max-width: 40rem;
+    }
+
+    .name-container {
+        align-content: center;
+        margin: 0 auto;
+    }
+
+    .name {
+        justify-self: center;
+        font-size: 4.8rem;
+        font-family: hello;
+        text-align: center;
+    }
+
+    button {
+        display: flex;
+        margin: auto;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: white;
+        padding: 1rem;
+        border: solid 2px;
+        border-radius: 1rem;
+        transition-duration: .2s;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        &&:active {
+            scale: 95%;
+        }
+    }
+
+    .nick-cannon {
+        margin: auto;
+        width: 20rem;
+        height: 20rem;
+        padding: 3rem;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+</style>
+
+<body onload="newName(), randomNickCannon()">
+    <main>
+    <div class="name-container">
+        <p class="name">
+            <span id="firstname"></span> 
+            <span id="secondname"></span>
+        </p>
+        <button onclick="newName(), randomNickCannon()">Generate</button>
+    </div>
+    <div class="nick-cannon" id="nick-cannon-pic">    
+    </div>
+    </main>
+</body>
+
+<script>
+    const firstnames = [
+        "Celestial", "Chrome", "Platinum", "Disciple", "Iconic", "Superior", "Mighty", "Strong", "Mighty", "Effervescent", "Sparkling", "Trillion", "Superior", "Exalted", "Fahrenheit", "Obsidian", "Stunning", "Holy", "Transcendent", "Mythic", "Apocryphal", "Indescribable", "Opulent", "Lavish", "Crystalline", "Ethereal", "Halcyon", "Tranquil", "Cosmic", "Luminous", "Fierce", "Goliath"
+    ];
+
+    const secondnames = [
+        "Pope", "Sphinx", "Jesus", "Phrygian", "Locrian", "Love", "Chiffon", "Lava", "Garnet", "Opal", "Meditation", "Everest", "Dirigible", "Zenith", "Duchess", "Caviar", "Diamond", "Zirconia", "Xanadu", "Extravaganza", "Couture", "Aurora", "Borealis", "Ephemera", "Labyrinth", "Serendipity", "Stardust", "Diva", "Princess", "Icon"
+    ];
+
+    function newName() {
+        let firstname, secondname;
+        firstname = document.getElementById("firstname");
+        secondname = document.getElementById("secondname");
+
+        const randomFirst = Math.floor(Math.random() * firstnames.length);
+
+        const randomSecond = Math.floor(Math.random() * secondnames.length);
+
+        firstname.innerHTML = firstnames[randomFirst];
+        secondname.innerHTML = secondnames[randomSecond];
+    }
+
+    const nickCannons = [
+        "<img src='images/nick-cannon1.png' alt='Nick Cannon'>",
+        "<img src='images/nick-cannon2.avif' alt='Nick Cannon'>",
+        "<img src='images/nick-cannon3.png' alt='Nick Cannon'>",
+        "<img src='images/nick-cannon4.png' alt='Nick Cannon'>",
+        "<img src='images/nick-cannon5.webp' alt='Nick Cannon'>",
+        "<img src='images/nick-cannon6.png' alt='Nick Cannon'>",
+        "<img src='images/nick-cannon7.png' alt='Nick Cannon'>",
+        "<img src='images/nick-cannon8.png' alt='Nick Cannon'>"
+    ]
+
+    function randomNickCannon() {
+        const randomNickCannon = Math.floor(Math.random() * nickCannons.length);
+
+        document.getElementById("nick-cannon-pic").innerHTML = nickCannons[randomNickCannon]
+
+    }
+</script>
+</html>
