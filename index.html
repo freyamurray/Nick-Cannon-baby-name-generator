@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 </head>
 
 <style>
-    * { 
+    * {
         box-sizing: border-box;
     }
 
@@ -15,8 +16,10 @@
         font-family: hello;
         src: url(Hello.ttf);
     }
+
     body {
         margin: 0;
+        padding: 0 1rem;
     }
 
     main {
@@ -37,7 +40,16 @@
         justify-self: center;
         font-size: 4.8rem;
         font-family: hello;
+        margin: 2rem 3rem;
         text-align: center;
+        text-shadow: rgb(255, 145, 0) 1px 1px 1px;
+        height: 10rem;
+        align-content: end;
+
+    }
+
+    p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     button {
@@ -50,7 +62,7 @@
         border: solid 2px;
         border-radius: 1rem;
         transition-duration: .2s;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
 
         &&:active {
             scale: 95%;
@@ -68,20 +80,35 @@
             object-fit: cover;
         }
     }
+
+    footer {
+        margin-top: -4rem;
+        font-size: .8rem;
+        text-align: center;
+        line-height: .5rem;
+
+        a {
+            color: rgb(155, 60, 0);
+        }
+    }
 </style>
 
 <body onload="newName(), randomNickCannon()">
     <main>
-    <div class="name-container">
-        <p class="name">
-            <span id="firstname"></span> 
-            <span id="secondname"></span>
-        </p>
-        <button onclick="newName(), randomNickCannon()">Generate</button>
-    </div>
-    <div class="nick-cannon" id="nick-cannon-pic">    
-    </div>
+        <div class="name-container">
+            <p class="name">
+                <span id="firstname"></span>
+                <span id="secondname"></span>
+            </p>
+            <button onclick="newName(), randomNickCannon()">Generate</button>
+        </div>
+        <div class="nick-cannon" id="nick-cannon-pic">
+        </div>
     </main>
+    <footer>
+        <p>Site by <a href="https://github.com/freyamurray">Freya Murray</a>.</p>
+        <p> If you liked this silly little project, consider <a href="https://ko-fi.com/7reya">buying me a kofi!</a></p>
+    </footer>
 </body>
 
 <script>
@@ -124,4 +151,5 @@
 
     }
 </script>
+
 </html>
